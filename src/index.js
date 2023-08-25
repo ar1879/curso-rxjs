@@ -15,12 +15,13 @@ import {
 // distinct
 const repeatedNumbers$ = of(1, 2, 1, 3, 4, 4, 2, 1).pipe(distinct());
 repeatedNumbers$.subscribe(console.log);
-
+console.log('<------------------------------->');
 // distinctUntilChanged
 const repeatedNumbersChanged$ = of(1, 2, 1, 3, 4, 4, 2).pipe(
   distinctUntilChanged()
-);
-repeatedNumbersChanged$.subscribe(console.log);
+  );
+  repeatedNumbersChanged$.subscribe(console.log);
+  console.log('<------------------------------->');
 
 // distinctUntilKeyChanged
 const repeatedNumbersKeyChanged$ = of(
